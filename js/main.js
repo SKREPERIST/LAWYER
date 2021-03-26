@@ -1,27 +1,13 @@
 $(function () {
-
-  $('.burger').on('click', function () {
-    $('.header__menu-bottom').slideToggle();
+  $(".burger").on("click", function () {
+    $(".header__menu-bottom").slideToggle();
   });
 
+  $(".slider__inner").slick();
 
+  let burger = document.querySelector(".burger");
 
-  $('.slider__inner').slick();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  burger.onclick = () => {
+    burger.classList.toggle("active");
+  };
 });

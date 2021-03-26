@@ -3,8 +3,8 @@ html {
 }
 
 *,
-*::before,
-*::after {
+*:::before,
+*:::after {
   box-sizing: inherit;
 }
 
@@ -14,7 +14,7 @@ a {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
 }
 
@@ -23,8 +23,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-
 
 /*----------------------------------------        HEADER        */
 .header {
@@ -74,7 +72,7 @@ body {
 
 .menu__bottom-link {
   font-weight: 500;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .menu__bottom-link:hover,
@@ -83,26 +81,26 @@ body {
   text-shadow: 4px 4px 25px #2a62c4;
 }
 
-.header__menu-bottom a+a {
+.header__menu-bottom a + a {
   margin-left: 48px;
 }
 
+/*                             BURGER           */
 .burger {
   display: block;
   height: 8px;
   width: 35px;
   background-color: #0d2e69;
-  position: relative;
-  left: 0;
-  top: 0;
+  position: fixed;
+  right: 30px;
+  top: 40px;
   cursor: pointer;
   display: none;
 }
 
-/*                             BURGER           */
-.burger:before,
-.burger:after {
-  content: '';
+.burger::before,
+.burger::after {
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -110,16 +108,28 @@ body {
   position: absolute;
 }
 
-.burger:before {
+.burger::before {
   left: 0;
   bottom: 12px;
 }
 
-.burger:after {
+.burger::after {
   left: 0;
   top: 12px;
 }
-
+.burger.active {
+  background-color: transparent;
+}
+.burger.active::before {
+  transform: rotate(-45deg);
+  bottom: -4px;
+  background-color: red;
+}
+.burger.active::after {
+  transform: rotate(45deg);
+  top: 4px;
+  background-color: red;
+}
 
 /*----------------------------------------        INTRO        */
 .intro {
@@ -142,7 +152,7 @@ body {
 }
 
 .intro__info-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 30px;
   font-weight: 700;
   color: #fff;
@@ -161,7 +171,7 @@ body {
   padding: 15px 35px;
   color: #fff;
   background-color: #0d2e69;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .intro__info-btn:hover {
@@ -214,7 +224,7 @@ body {
   padding: 15px 14px 18px;
 }
 
-.intro__form input[type=submit] {
+.intro__form input[type="submit"] {
   cursor: pointer;
 }
 
@@ -230,7 +240,6 @@ body {
   font-weight: 400;
   color: #fff;
 }
-
 
 /*----------------------------------------        ABOUT        */
 .about {
@@ -256,7 +265,7 @@ body {
 }
 
 .about__info-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -275,7 +284,7 @@ body {
 }
 
 .about__info-info {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 21px;
   font-weight: 700;
   color: #404040;
@@ -289,14 +298,13 @@ body {
   color: #fff;
   padding: 16px 58px;
   background-color: #0d2e69;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .about__info-link:hover {
   box-shadow: 1px 1px 5px #2a62c4, -1px -1px 5px #2a62c4;
   background-color: #173e83;
 }
-
 
 /*----------------------------------------        BLUE        */
 .blue {
@@ -306,7 +314,7 @@ body {
 }
 
 .blue__title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -318,13 +326,12 @@ body {
   color: #fff;
   font-weight: 700;
   font-size: 50px;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .blue__link:hover {
   text-shadow: 1px 1px 10px #2a62c4, -1px -1px 10px #2a62c4;
 }
-
 
 /*----------------------------------------        SLIDER        */
 .slider {
@@ -342,7 +349,7 @@ body {
 }
 
 .slider__title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 75px;
@@ -360,9 +367,9 @@ body {
   outline: none;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  content: '';
+.slick-prev::before,
+.slick-next::before {
+  content: "";
   display: block;
   width: 25px;
   height: 25px;
@@ -373,19 +380,17 @@ body {
   z-index: 10;
 }
 
-.slick-prev:before {
+.slick-prev::before {
   background-image: url(../images/arrow_l.png);
   top: 170px;
   left: 510px;
 }
 
-.slick-next:before {
+.slick-next::before {
   background-image: url(../images/arrow_r.png);
   top: 170px;
   right: 510px;
 }
-
-
 
 /*----------------------------------------        NEWS        */
 .news {
@@ -393,7 +398,7 @@ body {
 }
 
 .news__title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 50px;
   font-weight: 700;
   text-align: center;
@@ -424,7 +429,7 @@ body {
 }
 
 .news__item-name {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
@@ -445,13 +450,12 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   color: #0d2e69;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
 
 .news__item-btn:hover {
   text-shadow: 1px 1px 25px #4d8af3, -1px -1px 25px #528ef7;
 }
-
 
 /*----------------------------------------        FOOTER        */
 .footer {
@@ -466,7 +470,7 @@ body {
 }
 
 .footer__title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -478,7 +482,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
 .footer__text a:hover {
@@ -505,7 +509,7 @@ body {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
 .footer__copy-left a:hover {

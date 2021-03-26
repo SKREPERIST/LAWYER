@@ -47,7 +47,6 @@
   }
 }
 
-
 /*                                        1100                 */
 @media (max-width: 1100px) {
   .intro {
@@ -99,11 +98,9 @@
   }
 }
 
-
 /*                                        1000                 */
 @media (max-width: 1000px) {
-
-  .header__menu-bottom a+a {
+  .header__menu-bottom a + a {
     margin-left: 20px;
   }
 
@@ -115,7 +112,6 @@
     right: 430px;
   }
 }
-
 
 /*                                        950                 */
 @media (max-width: 950px) {
@@ -136,7 +132,6 @@
   }
 }
 
-
 /*                                        880                 */
 @media (max-width: 880px) {
   .slick-prev:before {
@@ -148,10 +143,8 @@
   }
 }
 
-
 /*                                        800                 */
 @media (max-width: 800px) {
-
   .header__menu-bottom,
   .header__menu-top {
     display: none;
@@ -162,8 +155,8 @@
   }
 
   .header__menu-bottom {
-    position: absolute;
-    top: 120px;
+    position: fixed;
+    top: 64px;
     left: 0;
     right: 0;
     width: 100%;
@@ -185,7 +178,7 @@
     text-shadow: 4px 4px 25px #518bf0;
   }
 
-  .header__menu-bottom a+a {
+  .header__menu-bottom a + a {
     margin-left: 0;
     margin-top: 20px;
   }
@@ -198,7 +191,6 @@
     right: 340px;
   }
 }
-
 
 /*                                        750                 */
 @media (max-width: 750px) {
@@ -233,10 +225,8 @@
   }
 }
 
-
 /*                                        650                 */
 @media (max-width: 650px) {
-
   .intro__info-title {
     font-size: 25px;
   }
@@ -277,15 +267,10 @@
   }
 }
 
-
 /*                                        600                 */
 @media (max-width: 600px) {
   .header__menu-top {
     display: none;
-  }
-
-  .burger {
-    left: 30%;
   }
 
   .about__img {
@@ -306,7 +291,6 @@
     right: 240px;
   }
 }
-
 
 /*                                        550                 */
 @media (max-width: 550px) {
@@ -334,7 +318,6 @@
     top: 210px;
   }
 }
-
 
 /*                                        450                 */
 @media (max-width: 450px) {
@@ -422,7 +405,6 @@
   }
 }
 
-
 /*                                        370                 */
 @media (max-width: 370px) {
   .about__img {
@@ -465,13 +447,7 @@
   }
 }
 
-
-
-
-
-
 @media (min-width: 800px) {
-
   .header__menu-bottom,
   .header__menu-top {
     display: block !important;
